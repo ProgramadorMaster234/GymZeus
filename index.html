@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEUS'S GYM</title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ZEUS GYM.jpg">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><a href="Index.html">ZEUS'S GYM</a></div>
+        <div class="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul>
+          <li><a href="Index.html">Início</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Inscrever</a></li>
+        </ul>
+      </nav>
+      
+      <div class="banner">
+        <div class="banner-content">
+          <h1>ZEUS'S GYM</h1>
+          <a href="#" class="btn">Inscreva-se</a>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="section-title">
+  <h2>Planos</h2>
+</div>
+
+
+    <section class="planos">
+      <div class="card">
+        <h3>Plano básico</h3>
+        <p>2 entradas por semana</p>
+        <h4>15€/mês</h4>
+        <a href="#" class="btn">Inscreva-se</a>
+      </div>
+      <div class="card">
+        <h3>Plano padrão</h3>
+        <p>3 entradas por semana + sábado</p>
+        <h4>30€/mês</h4>
+        <a href="#" class="btn">Inscreva-se</a>
+      </div>
+      <div class="card">
+        <h3>Plano premium</h3>
+        <p>Entradas todos os dias</p>
+        <h4>50€/mês</h4>
+        <a href="#" class="btn">Inscreva-se</a>
+      </div>
+      <div class="card">
+        <h3>Plano personalizado</h3>
+        <p>Treino com Personal Trainer</p>
+        <h4>Sob consulta</h4>
+        <a href="#" class="btn">Inscreva-se</a>
+      </div>
+    </section>
+    
+    <footer>
+      <p>&copy; 2023 ZEUS'S GYM. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="mensagem" style="display:none; position:fixed; bottom:20px; left:50%; opacity: 0.9; transform:translateX(-50%); padding:10px 20px; background:#333; color:#fff; border-radius:5px; z-index:9999;">
+      Bem-vindo ao seu ginásio! <button onclick="fecharMensagem()">Fechar</button>
+    </div>
+
+
+    <script>
+      // Exibir a mensagem após 3 segundos
+      setTimeout(function(){
+        document.getElementById("mensagem").style.display = "block";
+      }, 3000);
+    
+      // Fechar a mensagem
+      function fecharMensagem() {
+        document.getElementById("mensagem").style.display = "none";
+      }
+    
+      const cards = document.querySelectorAll(".card");
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "scale(1.1)";
+    card.style.transition = "transform 0.2s ease";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "scale(1)";
+    card.style.transition = "transform 0.2s ease";
+  });
+
+
+});
+
+const menuIcon = document.querySelector('.menu-icon');
+const menuItems = document.querySelector('nav ul');
+
+menuIcon.addEventListener('click', () => {
+  menuItems.classList.toggle('show');
+  menuIcon.classList.toggle('change');
+});
+
+
+
+
+    </script>
+    
+    
+    
+
+  </body>
+</html>
